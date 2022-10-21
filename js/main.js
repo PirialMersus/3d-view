@@ -118,7 +118,6 @@ function rotateLeftRigth(direction) {
       viewer.OrbitControls.rotateLeft(rp);
     }, 15);
   }
-  console.log("-", viewer.getCamera());
 }
 
 function rotateUpDown(direction) {
