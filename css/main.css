@@ -1,0 +1,25 @@
+.hero {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.viewer-container {
+  max-width: 1440px;
+  height: 500px;
+  cursor: move;
+}
+
+.controls {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.other-container {
+  position: relative;
+}
+
+.other-container img {
+  width: 100%;
+}
