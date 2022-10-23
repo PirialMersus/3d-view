@@ -1,23 +1,10 @@
-var cubeMapArr1 = [
-  "https://nafta.starconnect-ce.i.daimler.com/iris/iris.jpg?COSY-EU-100-1713d0VXqaSFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtGyutsd2HTcUfp8fXGEuiRJ0l3IrOB2NW2bApjtwI5uG5uQC3aM1kzNH%25km7j8hfhKVk0Q%25vqeU%25yLRsGWYaxCXWrH1zMdn8w7hnoiZK%25gM4FvTQTg9LU26PDaGqSeWFmItsd9kVcUfAyYXOc6VRjtirH1CHRn8w5zEoiZHiNM4F8CwTg9jze6PDePoSeWsKMtsLV79MOuljcVLHvGEVdhcfWF002ROxEnfxXr1RjijhWh5DvaAFCDGp04U4aLRg7vxb=undefined&fb=1&BKGND=12&IMGT=A27&pov=bis4,szn",
-  "https://nafta.starconnect-ce.i.daimler.com/iris/iris.jpg?COSY-EU-100-1713d0VXqaSFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtGyutsd2HTcUfp8fXGEuiRJ0l3IrOB2NW2bApjtwI5uG5uQC3aM1kzNH%25km7j8hfhKVk0Q%25vqeU%25yLRsGWYaxCXWrH1zMdn8w7hnoiZK%25gM4FvTQTg9LU26PDaGqSeWFmItsd9kVcUfAyYXOc6VRjtirH1CHRn8w5zEoiZHiNM4F8CwTg9jze6PDePoSeWsKMtsLV79MOuljcVLHvGEVdhcfWF002ROxEnfxXr1RjijhWh5DvaAFCDGp04U4aLRg7vxb=undefined&fb=1&BKGND=12&IMGT=A27&pov=bis2,szn",
-  "https://nafta.starconnect-ce.i.daimler.com/iris/iris.jpg?COSY-EU-100-1713d0VXqaSFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtGyutsd2HTcUfp8fXGEuiRJ0l3IrOB2NW2bApjtwI5uG5uQC3aM1kzNH%25km7j8hfhKVk0Q%25vqeU%25yLRsGWYaxCXWrH1zMdn8w7hnoiZK%25gM4FvTQTg9LU26PDaGqSeWFmItsd9kVcUfAyYXOc6VRjtirH1CHRn8w5zEoiZHiNM4F8CwTg9jze6PDePoSeWsKMtsLV79MOuljcVLHvGEVdhcfWF002ROxEnfxXr1RjijhWh5DvaAFCDGp04U4aLRg7vxb=undefined&fb=1&BKGND=12&IMGT=A27&pov=bis5,szn",
-  "https://nafta.starconnect-ce.i.daimler.com/iris/iris.jpg?COSY-EU-100-1713d0VXqaSFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtGyutsd2HTcUfp8fXGEuiRJ0l3IrOB2NW2bApjtwI5uG5uQC3aM1kzNH%25km7j8hfhKVk0Q%25vqeU%25yLRsGWYaxCXWrH1zMdn8w7hnoiZK%25gM4FvTQTg9LU26PDaGqSeWFmItsd9kVcUfAyYXOc6VRjtirH1CHRn8w5zEoiZHiNM4F8CwTg9jze6PDePoSeWsKMtsLV79MOuljcVLHvGEVdhcfWF002ROxEnfxXr1RjijhWh5DvaAFCDGp04U4aLRg7vxb=undefined&fb=1&BKGND=12&IMGT=A27&pov=bis6,szn",
-  "https://nafta.starconnect-ce.i.daimler.com/iris/iris.jpg?COSY-EU-100-1713d0VXqaSFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtGyutsd2HTcUfp8fXGEuiRJ0l3IrOB2NW2bApjtwI5uG5uQC3aM1kzNH%25km7j8hfhKVk0Q%25vqeU%25yLRsGWYaxCXWrH1zMdn8w7hnoiZK%25gM4FvTQTg9LU26PDaGqSeWFmItsd9kVcUfAyYXOc6VRjtirH1CHRn8w5zEoiZHiNM4F8CwTg9jze6PDePoSeWsKMtsLV79MOuljcVLHvGEVdhcfWF002ROxEnfxXr1RjijhWh5DvaAFCDGp04U4aLRg7vxb=undefined&fb=1&BKGND=12&IMGT=A27&pov=bis1,szn",
-  "https://nafta.starconnect-ce.i.daimler.com/iris/iris.jpg?COSY-EU-100-1713d0VXqaSFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtGyutsd2HTcUfp8fXGEuiRJ0l3IrOB2NW2bApjtwI5uG5uQC3aM1kzNH%25km7j8hfhKVk0Q%25vqeU%25yLRsGWYaxCXWrH1zMdn8w7hnoiZK%25gM4FvTQTg9LU26PDaGqSeWFmItsd9kVcUfAyYXOc6VRjtirH1CHRn8w5zEoiZHiNM4F8CwTg9jze6PDePoSeWsKMtsLV79MOuljcVLHvGEVdhcfWF002ROxEnfxXr1RjijhWh5DvaAFCDGp04U4aLRg7vxb=undefined&fb=1&BKGND=12&IMGT=A27&pov=bis3,szn",
-];
 
-var cubeMapArr2 = [
-  "https://nafta.starconnect-ce.i.daimler.com/iris/iris.jpg?COSY-EU-100-1713d0VXqaSFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtGyutsd2HTcUfp8fXGEuiRJ0l3IrOB2NW2bApjtwI5uG5uQC3aM1kzNH%25km7j8hfhKVk0Q%25vqeU%25yLRsGWYaxCXWrH1zMdn8w7hnoiZK%25gM4FvTQTg9LU26PDaGqSeWFmItsd9kVcUfAyYXOc6VRjtirH1CB%25n8w5zEoiZHiNM4F8CwTg9jze6PDePoSeWsKMtsLV79MOuljcVLHvGEVdhcfWF002ROxEnfxXr1RjijhWh5DvaAFCDGp04U4aLRg7vxb=undefined&fb=1&BKGND=12&IMGT=A27&pov=bis4",
-  "https://nafta.starconnect-ce.i.daimler.com/iris/iris.jpg?COSY-EU-100-1713d0VXqaSFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtGyutsd2HTcUfp8fXGEuiRJ0l3IrOB2NW2bApjtwI5uG5uQC3aM1kzNH%25km7j8hfhKVk0Q%25vqeU%25yLRsGWYaxCXWrH1zMdn8w7hnoiZK%25gM4FvTQTg9LU26PDaGqSeWFmItsd9kVcUfAyYXOc6VRjtirH1CB%25n8w5zEoiZHiNM4F8CwTg9jze6PDePoSeWsKMtsLV79MOuljcVLHvGEVdhcfWF002ROxEnfxXr1RjijhWh5DvaAFCDGp04U4aLRg7vxb=undefined&fb=1&BKGND=12&IMGT=A27&pov=bis2",
-  "https://nafta.starconnect-ce.i.daimler.com/iris/iris.jpg?COSY-EU-100-1713d0VXqaSFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtGyutsd2HTcUfp8fXGEuiRJ0l3IrOB2NW2bApjtwI5uG5uQC3aM1kzNH%25km7j8hfhKVk0Q%25vqeU%25yLRsGWYaxCXWrH1zMdn8w7hnoiZK%25gM4FvTQTg9LU26PDaGqSeWFmItsd9kVcUfAyYXOc6VRjtirH1CB%25n8w5zEoiZHiNM4F8CwTg9jze6PDePoSeWsKMtsLV79MOuljcVLHvGEVdhcfWF002ROxEnfxXr1RjijhWh5DvaAFCDGp04U4aLRg7vxb=undefined&fb=1&BKGND=12&IMGT=A27&pov=bis5",
-  "https://nafta.starconnect-ce.i.daimler.com/iris/iris.jpg?COSY-EU-100-1713d0VXqaSFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtGyutsd2HTcUfp8fXGEuiRJ0l3IrOB2NW2bApjtwI5uG5uQC3aM1kzNH%25km7j8hfhKVk0Q%25vqeU%25yLRsGWYaxCXWrH1zMdn8w7hnoiZK%25gM4FvTQTg9LU26PDaGqSeWFmItsd9kVcUfAyYXOc6VRjtirH1CB%25n8w5zEoiZHiNM4F8CwTg9jze6PDePoSeWsKMtsLV79MOuljcVLHvGEVdhcfWF002ROxEnfxXr1RjijhWh5DvaAFCDGp04U4aLRg7vxb=undefined&fb=1&BKGND=12&IMGT=A27&pov=bis6",
-  "https://nafta.starconnect-ce.i.daimler.com/iris/iris.jpg?COSY-EU-100-1713d0VXqaSFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtGyutsd2HTcUfp8fXGEuiRJ0l3IrOB2NW2bApjtwI5uG5uQC3aM1kzNH%25km7j8hfhKVk0Q%25vqeU%25yLRsGWYaxCXWrH1zMdn8w7hnoiZK%25gM4FvTQTg9LU26PDaGqSeWFmItsd9kVcUfAyYXOc6VRjtirH1CB%25n8w5zEoiZHiNM4F8CwTg9jze6PDePoSeWsKMtsLV79MOuljcVLHvGEVdhcfWF002ROxEnfxXr1RjijhWh5DvaAFCDGp04U4aLRg7vxb=undefined&fb=1&BKGND=12&IMGT=A27&pov=bis1",
-  "https://nafta.starconnect-ce.i.daimler.com/iris/iris.jpg?COSY-EU-100-1713d0VXqaSFqtyO67PobzIr3eWsrrCsdRRzwQZQ9vZbMw3SGtGyutsd2HTcUfp8fXGEuiRJ0l3IrOB2NW2bApjtwI5uG5uQC3aM1kzNH%25km7j8hfhKVk0Q%25vqeU%25yLRsGWYaxCXWrH1zMdn8w7hnoiZK%25gM4FvTQTg9LU26PDaGqSeWFmItsd9kVcUfAyYXOc6VRjtirH1CB%25n8w5zEoiZHiNM4F8CwTg9jze6PDePoSeWsKMtsLV79MOuljcVLHvGEVdhcfWF002ROxEnfxXr1RjijhWh5DvaAFCDGp04U4aLRg7vxb=undefined&fb=1&BKGND=12&IMGT=A27&pov=bis3",
-];
+var cubeMapArr1 = "../img/image_2021-06-02_10-07-23.png";
+
+var cubeMapArr2 = "../img/image_2021-06-02_10-07-39.png";;
 
 var equirectangularOne =
-  "https://mediaserver.mbusa.com/proxy/mbusa/2020/s450v?client=mb&brand=mbusa&resp=err_status%2Cjpeg&quality=90&vehicle=2020_s450v&pov=centerpano%2Ccgd&paint=2_040&fabric=4_201&sa=0_729&width=4500&height=2250";
+  "../img/image_2021-06-02_10-07-09.png";
 
 var trimBtnOne = document.querySelector(".switch-trim-1");
 var trimBtnTwo = document.querySelector(".switch-trim-2");
@@ -35,11 +22,7 @@ var panorama, viewer, camera, texture;
 var showBBD = true;
 
 function setPanorama(assets) {
-  if (showBBD) {
-    panorama = new PANOLENS.CubePanorama(assets);
-  } else {
     panorama = new PANOLENS.ImagePanorama(assets);
-  }
   // panorama.addEventListener( 'onLoad', () => {
   //   texture = panorama.getTexture();
   // });
