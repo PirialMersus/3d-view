@@ -1,10 +1,10 @@
 
-var cubeMapArr1 = "../img/image_2021-06-02_10-07-23.png";
+var cubeMapArr1 = "/img/image_2021-06-02_10-07-23.png";
 
-var cubeMapArr2 = "../img/image_2021-06-02_10-07-39.png";;
+var cubeMapArr2 = "/img/image_2021-06-02_10-07-39.png";;
 
 var equirectangularOne =
-  "../img/image_2021-06-02_10-07-09.png";
+  "/img/image_2021-06-02_10-07-09.png";
 
 var trimBtnOne = document.querySelector(".switch-trim-1");
 var trimBtnTwo = document.querySelector(".switch-trim-2");
