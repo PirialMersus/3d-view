@@ -1,14 +1,16 @@
 
 var cubeMapArr1 = "./img/image_2021-06-02_10-07-23.png";
 
-var cubeMapArr2 = "./img/image_2021-06-02_10-07-39.png";;
+var cubeMapArr2 = "./img/image_2021-06-02_10-07-39.png";
 
 var equirectangularOne =
   "./img/image_2021-06-02_10-07-09.png";
 
+var hero = document.querySelector(".hero");
 var trimBtnOne = document.querySelector(".switch-trim-1");
 var trimBtnTwo = document.querySelector(".switch-trim-2");
 var trimBtnThree = document.querySelector(".switch-trim-3");
+var fullScreen = document.querySelector(".switch-trim-4");
 var leftBtn = document.querySelector(".left");
 var rightBtn = document.querySelector(".right");
 var upBtn = document.querySelector(".up");
@@ -32,6 +34,7 @@ function addViewer() {
   viewer = new PANOLENS.Viewer({
     container: container,
     controlBar: false,
+
   });
   viewer.OrbitControls.maxFov = 80;
   viewer.OrbitControls.minFov = 50;
@@ -150,3 +153,10 @@ downBtn.addEventListener("mousedown", () => startRotation("down"));
 downBtn.addEventListener("mouseup", stopRotation);
 zoomInBtn.onclick = () => zoom("in");
 zoomOutBtn.onclick = () => zoom("out");
+fullScreen.onclick = () => {
+  hero.classList.toggle('fullscreen')
+  window.dispatchEvent(new Event('resize'))
+};
+hero.addEventListener('resize', () => {
+  console.log('hello')
+})
